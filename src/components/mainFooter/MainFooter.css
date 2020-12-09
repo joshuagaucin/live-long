@@ -1,0 +1,21 @@
+.main-footer {
+    background: black;
+    color:white;
+}
+#portfolio {
+    display: flex;
+    
+}
+#portfolio a{
+    padding: 10px;
+    font-size: 20px;
+}
+#phone {
+    display: flex;
+    
+}
+#phone p {
+    
+    padding-left: 5px;
+    font-size: 17px;
+}

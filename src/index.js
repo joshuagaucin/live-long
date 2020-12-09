@@ -4,7 +4,7 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
-import App from "./App";
+import App from "./components/app/App";
 import { store, history } from "./redux";
 import 'semantic-ui-css/semantic.min.css';
 

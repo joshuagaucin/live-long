@@ -1,9 +1,11 @@
+
 #login-form {
   display: flex;
   flex-direction: column;
-
-  width: 300px;
- 
+  padding-top: 25vh;
+  width: 70vw;
+  max-width: 500px;
+  
 }
 
 .LoginForm {

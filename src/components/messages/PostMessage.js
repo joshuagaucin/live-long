@@ -1,45 +1,44 @@
-import React from "react";
-import { Button, Form } from "semantic-ui-react";
-import DataService from "../services/dataService"
-class PostMessage extends React.Component {
- 
-    constructor(props) {
-   
+import React, { Component } from "react";
+import PostMessageService from "../services/PostMessageService";
+class PostMessage extends Component {
+  constructor(props) {
     super(props);
-    this.client = new DataService();
+    this.client = new PostMessageService();
     this.state = {
-      
       text: "",
-      submitted: false
+      submitted: false,
+     
     };
   }
-  handlePostMessage = (event) => {
-    event.preventDefault();
-    this.client.postMessage(this.state.text)
-        const form = document.getElementById("message");
-      form.value=""
-      this.setState({submitted: true})
-      
-    }
-   
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+ 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.client.postMessage(this.state.text);
+    const form = document.getElementById("message-input");
+    form.value = "";
+    this.setState({ submitted: true,  });
   };
+
+  handleChange = (e) => {
+    this.setState({ text: e.target.value });
+  };
+
   render() {
     return (
       <div>
-        <h4>Whats on your Super mind?</h4>
-        <Form className="PostMessage" onSubmit={this.handlePostMessage}>
+        <form id="new-message" onSubmit={this.handleSubmit}>
           <input
-            id="message"
+            id="message-input"
             type="text"
-            name="text"
-            required onChange={this.handleChange}
+            name="message"
+            required
+            onChange={this.handleChange}
           />
-          <Button type="submit">Post</Button>
-        </Form>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     );
   }
 }
+
 export default PostMessage;

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";
 import { withAsyncAction } from "../../redux/HOCs";
-import { userIsNotAuthenticated } from "../../redux/HOCs";
 
 class Menu extends React.Component {
   handleLogout = event => {
@@ -12,8 +11,8 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="Menu">
-        <h1>Super-Book</h1>
-        
+        <h1>Live Long</h1>
+
         {this.props.userIsNotAuthenticated && (
           <div className="login-signup">
             <button>
@@ -30,12 +29,15 @@ class Menu extends React.Component {
         )}
 
         {this.props.isAuthenticated && (
-          <div id="menu-links">
-            <Link className="Home" to="/">Home</Link>
-            <Link to="/messagefeed">Message Feed</Link>
-            <Link to="/" onClick={this.handleLogout}>
-              Logout
-            </Link>
+          <div className="dropdown">
+            <button className="dropbtn">Menu</button>
+            <div className="dropdown-content">
+              <Link to="/profile/:username">Home</Link>
+              <Link to="/chat">Chat Room</Link>
+              <Link to="/" onClick={this.handleLogout}>
+                Logout
+              </Link>
+            </div>
           </div>
         )}
       </div>
@@ -43,4 +45,7 @@ class Menu extends React.Component {
   }
 }
 
-export default withAsyncAction("auth", "logout")(Menu);
+export default  withAsyncAction (
+  "auth",
+  "logout"
+)(Menu);

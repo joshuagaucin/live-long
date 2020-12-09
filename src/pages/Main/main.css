@@ -1,0 +1,50 @@
+
+.about{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid grey;
+}
+.img{
+    border-radius: 2rem;
+    height: 50vh;
+    width: 80vw;
+    background-size: cover;
+}
+#site{
+    background: url(./images/site-hero.jpg);
+    background-size: cover;
+    
+}
+#eating{
+    background: url(./images/food-hero.jpg);
+    background-size: cover;
+   
+}
+
+.video{
+    max-width:700px;
+    height: 400px;
+}
+.about h1{
+    font-family: 'Big Shoulders Stencil Display ', serif;
+    font-size: 64px;
+}
+.about p {
+    text-align: left;
+    font-size: 32px;
+    font-family: 'Castoro', serif;
+}
+
+#training{
+    background: url(./images/training-hero.jpg);
+    background-size: cover;
+    
+}
+@media screen and (min-width: 300px) {
+  .video {
+    width: 95vw;
+  }
+}

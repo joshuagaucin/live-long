@@ -49,26 +49,28 @@ class Likes extends React.Component {
   };
 
   render() {
+     
     return (
       <div>
         <Form className="form-control">
           <li className="Message">
-            At{this.props.createdAt}, {this.props.username}posted:
+            <div className="user">{this.props.username}  posted:</div>
             <br />
-            {this.props.text}
+            <div className="the-message">{this.props.text}</div>
             {/* <div className="like-count">Likes: {this.state.likes.length}</div> */}
-            <Button onClick={this.handleLike}>
-              <span role="img" aria-label="Like">
-                👍
-              </span>{" "}
-              {this.state.likes.length}
-            </Button>
-            <Button onClick={this.handleDeleteLike}>
-              <span role="img" aria-label="Like">
-                👎
-              </span>
-            </Button>
-            
+            <div className="buttons">
+              <Button onClick={this.handleLike}>
+                <span role="img" aria-label="Like">
+                  👍
+                </span>{" "}
+                {this.state.likes.length}
+              </Button>
+              <Button onClick={this.handleDeleteLike}>
+                <span role="img" aria-label="Like">
+                  👎
+                </span>
+              </Button>
+            </div>
           </li>
         </Form>
       </div>

@@ -1,0 +1,69 @@
+
+h1{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+#scrollableDiv {
+    height: 80vh;
+    background: white;
+    overflow: auto;
+    display: flex;
+    width: 100vw;
+    
+   
+    flex-direction: column-reverse;
+    
+}
+ul div{
+    display: flex;
+    list-style-type: none;
+    padding-bottom: 5px;
+    
+}
+.infinite-scroll-component {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+}
+ul{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.Message {
+
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    padding: 10px;
+    background-color: #A8DDFD;
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid #97C6E3;
+    border-radius: 10px;
+    width: 360px;
+}
+.ui.button{
+    width:100%;
+    display: flex;
+}
+.ui.label{
+    background: white;
+}
+.the-message{
+    font-size: 30px;
+}
+#message-input{
+    height: 30px;
+    width: 360px;
+    
+}
+#new-message{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    bottom:3%;
+}

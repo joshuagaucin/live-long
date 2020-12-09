@@ -31,14 +31,7 @@ class DataService {
     return token;
   }
 
-  getRecentMessages() {
-    return this.client
-      .get(this.baseURL + "/messages?limit=20")
-      .then((response) => {
-        return response.data.messages;
-      });
-  }
-
+  
   registerUser(userData) {
     console.log(userData);
     return this.client.post(this.baseURL + "/users", userData);
@@ -74,19 +67,6 @@ class DataService {
 
     return this.client.delete(`${this.baseURL}/likes/${likeId}`, config);
   }
-  postMessage(messageData) {
-    const loginData = JSON.parse(localStorage.getItem("login"));
-    const requestBody = { text: messageData };
-    const config = {
-      headers: {
-        Authorization: `Bearer ${loginData.result.token}`,
-      },
-    };
-    return this.client
-      .post(this.baseURL + "/messages", requestBody, config)
-      .then((response) => response.data.messages);
-  }
+ 
 }
-
-
 export default DataService

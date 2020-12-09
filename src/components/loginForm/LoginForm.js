@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
           />
           <Label htmlFor="password">Password</Label>
           <input
-            type="password"
+            type="text"
             name="password"
             required
             onChange={this.handleChange}
@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
           <Button className="registerButton">
             <Message>
               <Link className="signUp" to="/Registration">
-                New to Super-Book? Sign up now!
+            Not a Member? Sign up now!
               </Link>
             </Message>
           </Button>
