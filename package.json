@@ -34,7 +34,7 @@
 "build": "npm run build-css && react-scripts build",
 "test": "react-scripts test --env=jsdom",
 "eject": "react-scripts eject",
-"postinstall": "npm run build",
+"postinstall": "knex migrate:latest && if [ \"$NODE_ENV\" = production ]; then cd web_app/ && npm install --only=dev && npm install && npm run build; fi",
     "build:graph-html": "depcruise --validate .dependency-cruiser.js --exclude '^node_modules' --output-type dot src | dot -T svg > dependencygraph.html"
   },
   "eslintConfig": {
