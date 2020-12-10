@@ -24,10 +24,17 @@
     "semantic-ui-react": "^1.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    
+"build-css": "node-sass src/ -o src/",
+"watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+"start": "npm run start:server",
+"watch": "npm-run-all --parallel watch-css start:*",
+"start:server": "node server/server.js",
+"start:client": "react-scripts start",
+"build": "npm run build-css && react-scripts build",
+"test": "react-scripts test --env=jsdom",
+"eject": "react-scripts eject",
+"postinstall": "npm run build",
     "build:graph-html": "depcruise --validate .dependency-cruiser.js --exclude '^node_modules' --output-type dot src | dot -T svg > dependencygraph.html"
   },
   "eslintConfig": {
