@@ -1,7 +1,7 @@
 import React from "react"
 import Likes from "../../components/messages/Likes"
 import Menu from "../../components/menu/Menu"
-import BackendService from "../../components/services/messageService"
+import BackendService from "../../components/services/MessageService"
 import "./messageFeed.css"
 import { userIsAuthenticated } from "../../redux/HOCs";
 import PostMessage from "../../components/messages/PostMessage"

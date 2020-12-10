@@ -12,7 +12,7 @@ class PostMessageService {
     this.url = url + "messages";
     this.client = client;
   }
-
+ 
   postMessage(messageBody) {
     const loginData = JSON.parse(localStorage.getItem("login"));
     let fetchBody = {
