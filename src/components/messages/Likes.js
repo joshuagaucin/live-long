@@ -1,14 +1,14 @@
 import React from "react";
-import { Form,  Button } from "semantic-ui-react";
+import { Form, Button } from "semantic-ui-react";
 import DataService from "../services/dataService";
-import DeleteMessage from "./DeleteMessage"
+
 
 class Likes extends React.Component {
   state = {
     likes: this.props.likes,
   };
   //
-  
+
   handleLike = () => {
     const dataService = new DataService();
     const username = dataService.getUserName();
@@ -49,12 +49,11 @@ class Likes extends React.Component {
   };
 
   render() {
-     
     return (
       <div>
         <Form className="form-control">
           <li className="Message">
-            <div className="user">{this.props.username}  posted:</div>
+            <div className="user">{this.props.username} posted:</div>
             <br />
             <div className="the-message">{this.props.text}</div>
             {/* <div className="like-count">Likes: {this.state.likes.length}</div> */}

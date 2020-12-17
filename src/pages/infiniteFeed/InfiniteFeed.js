@@ -1,17 +1,15 @@
-import React from "react"
-import Likes from "../../components/messages/Likes"
-import Menu from "../../components/menu/Menu"
-import BackendService from "../../components/services/MessageService"
-import "./messageFeed.css"
+import React from "react";
+import Likes from "../../components/messages/Likes";
+import Menu from "../../components/menu/Menu";
+import BackendService from "../../components/services/messageService";
+import "./messageFeed.css";
 import { userIsAuthenticated } from "../../redux/HOCs";
-import PostMessage from "../../components/messages/PostMessage"
+import PostMessage from "../../components/messages/PostMessage";
 import InfiniteScroll from "react-infinite-scroll-component";
-
 
 class InfiniteFeed extends React.Component {
   state = {
     messages: [],
-    
   };
   componentDidMount() {
     new BackendService().getRecentMessages().then((messages) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import DataService from "../services/dataService";
 import Users from "./Users";
-import "./userList.css"
+import "./userList.css";
 class UserList extends React.Component {
   state = { users: [] };
   componentDidMount() {
@@ -20,14 +20,15 @@ class UserList extends React.Component {
     }
     return (
       <div className="ListOfUsers">
-                <h1>Current List of Super Friends:</h1>
-                <ul>
-                    <li>{this.state.users.map(users => {
-                        return <Users key={users.username}{...users} />
-                    })}
-                    </li>
-                </ul>
-                </div>
+        <h1>Current List of Super Friends:</h1>
+        <ul>
+          <li>
+            {this.state.users.map((users) => {
+              return <Users key={users.username} {...users} />;
+            })}
+          </li>
+        </ul>
+      </div>
     );
   }
 }

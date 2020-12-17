@@ -1,5 +1,5 @@
-import axios from "axios"
-import { store } from "../../redux/"
+import axios from "axios";
+import { store } from "../../redux";
 class DataService {
   constructor(
     baseURL = "https://socialapp-api.herokuapp.com",
@@ -31,7 +31,6 @@ class DataService {
     return token;
   }
 
-  
   registerUser(userData) {
     console.log(userData);
     return this.client.post(this.baseURL + "/users", userData);
@@ -67,6 +66,5 @@ class DataService {
 
     return this.client.delete(`${this.baseURL}/likes/${likeId}`, config);
   }
- 
 }
-export default DataService
+export default DataService;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import PostMessageService from "../services/PostMessageService"
+import PostMessageService from "../services/PostMessageService";
 class PostMessage extends Component {
   constructor(props) {
     super(props);
@@ -8,10 +7,9 @@ class PostMessage extends Component {
     this.state = {
       text: "",
       submitted: false,
-      messages: [],
     };
   }
-  
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.client.postMessage(this.state.text);

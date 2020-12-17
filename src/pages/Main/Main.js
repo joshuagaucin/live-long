@@ -1,12 +1,8 @@
 import React from "react";
 import Menu from "../../components/menu/Menu";
 import { userIsAuthenticated } from "../../redux/HOCs";
-import MainFooter from '../../components/mainFooter/MainFooter'
-import "./main.css"
-
-
-       
-         
+import MainFooter from "../../components/mainFooter/MainFooter";
+import "./main.css";
 
 class Main extends React.Component {
   render() {
@@ -71,8 +67,8 @@ class Main extends React.Component {
             a workout aimed at beginners who want to build muscle
           </p>
           <iframe
-           title="training"
-           className="video"
+            title="training"
+            className="video"
             src="https://www.youtube.com/embed/Umu4cxTPaC8"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -81,7 +77,6 @@ class Main extends React.Component {
         </div>
         <MainFooter />
       </div>
-
     );
   }
 }

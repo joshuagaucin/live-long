@@ -1,6 +1,4 @@
-import axios from "axios"
-
-
+import axios from "axios";
 
 class MessageService {
   constructor(
@@ -10,15 +8,11 @@ class MessageService {
     this.baseURL = baseURL;
     this.client = client;
   }
-  
+
   getRecentMessages() {
-    
-    return this.client
-      .get(this.baseURL + "/messages?")
-      .then((response) => {
-        return response.data.messages;
-      });
+    return this.client.get(this.baseURL + "/messages?").then((response) => {
+      return response.data.messages;
+    });
   }
-  
 }
 export default MessageService;

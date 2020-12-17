@@ -3,15 +3,10 @@ import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import "./RegistrationForm.css";
 
-import DataService from "../services/dataService"
+import DataService from "../services/dataService";
 import Menu from "../menu/Menu";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  Label,
- Message
-} from "semantic-ui-react";
+import { Button, Form, Label, Message } from "semantic-ui-react";
 import { userIsNotAuthenticated } from "../../redux/HOCs";
 class RegistrationForm extends React.Component {
   constructor(props) {
@@ -27,14 +22,14 @@ class RegistrationForm extends React.Component {
   handleRegistration = (e) => {
     e.preventDefault();
     this.client.registerUser(this.state).then((result) => {
-      const loginData= {
+      const loginData = {
         username: this.state.username,
-        password: this.state.password
-      }
-      this.props.login(loginData)
+        password: this.state.password,
+      };
+      this.props.login(loginData);
     });
   };
-  
+
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -88,4 +83,6 @@ class RegistrationForm extends React.Component {
   }
 }
 
-export default userIsNotAuthenticated(withAsyncAction("auth", "login")(RegistrationForm));
+export default userIsNotAuthenticated(
+  withAsyncAction("auth", "login")(RegistrationForm)
+);
