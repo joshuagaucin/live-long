@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/live-long/static/css/main.c5fa54ed.chunk.css",
+    "main.css": "/live-long/static/css/main.953a4286.chunk.css",
     "main.js": "/live-long/static/js/main.985c97e1.chunk.js",
     "main.js.map": "/live-long/static/js/main.985c97e1.chunk.js.map",
     "runtime-main.js": "/live-long/static/js/runtime-main.9d281943.js",
@@ -9,10 +9,10 @@
     "static/js/2.a7b49c92.chunk.js": "/live-long/static/js/2.a7b49c92.chunk.js",
     "static/js/2.a7b49c92.chunk.js.map": "/live-long/static/js/2.a7b49c92.chunk.js.map",
     "index.html": "/live-long/index.html",
-    "precache-manifest.8bd561922fbccd56c5a61fd4dcefc8a9.js": "/live-long/precache-manifest.8bd561922fbccd56c5a61fd4dcefc8a9.js",
+    "precache-manifest.ced1a954a2fde956546420fed0da4534.js": "/live-long/precache-manifest.ced1a954a2fde956546420fed0da4534.js",
     "service-worker.js": "/live-long/service-worker.js",
     "static/css/2.55140da4.chunk.css.map": "/live-long/static/css/2.55140da4.chunk.css.map",
-    "static/css/main.c5fa54ed.chunk.css.map": "/live-long/static/css/main.c5fa54ed.chunk.css.map",
+    "static/css/main.953a4286.chunk.css.map": "/live-long/static/css/main.953a4286.chunk.css.map",
     "static/js/2.a7b49c92.chunk.js.LICENSE.txt": "/live-long/static/js/2.a7b49c92.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/live-long/static/media/outline-icons.ef60a4f6.woff",
     "static/media/main.css": "/live-long/static/media/training-hero.94b1454e.jpg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.9d281943.js",
     "static/css/2.55140da4.chunk.css",
     "static/js/2.a7b49c92.chunk.js",
-    "static/css/main.c5fa54ed.chunk.css",
+    "static/css/main.953a4286.chunk.css",
     "static/js/main.985c97e1.chunk.js"
   ]
 }
