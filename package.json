@@ -1,5 +1,8 @@
 {
   "homepage": "http://joshuagaucin.github.io/live-long",
+"chatpage": "http://joshuagaucin.github.io/live-long/chat",
+"mainpage": "http://joshuagaucin.github.io/live-long/profile/:username",
+"recipepage": "http://joshuagaucin.github.io/live-long/RecipeSearch",
   "name": "live-long",
   "version": "0.1.0",
   "private": true,
