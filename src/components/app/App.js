@@ -7,6 +7,7 @@ import RegistrationForm from "../registrationForm/RegistrationForm";
 import InfiniteFeed from "../../pages/infiniteFeed/InfiniteFeed";
 import Home from "../../pages/Home/Home";
 import Main from "../../pages/Main/Main";
+import RecipeSearch from "../../pages/RecipeSearch";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Route exact path="/Registration" component={RegistrationForm} />
           <Route exact path="/login" component={loginForm} />
           <Route exact path="/profile/:username" component={Main} />
+          <Route exact path="/recipeSearch" component={RecipeSearch} />
         </Switch>
       </div>
     );

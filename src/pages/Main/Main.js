@@ -3,6 +3,7 @@ import Menu from "../../components/menu/Menu";
 import { userIsAuthenticated } from "../../redux/HOCs";
 import MainFooter from "../../components/mainFooter/MainFooter";
 import "./main.css";
+import { Link } from "react-router-dom";
 
 class Main extends React.Component {
   render() {
@@ -50,6 +51,11 @@ class Main extends React.Component {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
+          <p>
+            Now that you know a little more about the challenges of dieting
+            please use our own recipe finder to discover delicous recipes
+            alligned with your goals!<Link to="/recipeSearch">Recipes</Link>
+          </p>
         </div>
         <div className="about">
           <div id="training" className="img"></div>

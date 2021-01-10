@@ -3,7 +3,6 @@
   "name": "live-long",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "antd": "^4.6.6",
     "axios": "^0.20.0",
@@ -23,17 +22,16 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^1.2.1"
+    "semantic-ui-react": "^1.2.1",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

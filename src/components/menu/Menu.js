@@ -11,7 +11,7 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="Menu">
-        <h1>Live Long</h1>
+        <Link to="/profile/:username"><h1>Live Long</h1></Link>
 
         {this.props.userIsNotAuthenticated && (
           <div className="login-signup">
@@ -30,10 +30,13 @@ class Menu extends React.Component {
 
         {this.props.isAuthenticated && (
           <div className="dropdown">
-            <button className="dropbtn">Menu</button>
+            <button className="dropbtn">
+              <h1>Menu</h1>
+            </button>
             <div className="dropdown-content">
               <Link to="/profile/:username">Home</Link>
               <Link to="/chat">Chat Room</Link>
+              <Link to="/recipeSearch">Recipes</Link>
               <Link to="/" onClick={this.handleLogout}>
                 Logout
               </Link>
