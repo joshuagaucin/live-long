@@ -30,7 +30,7 @@ q=${query}&app_id=${apiId}&app_key=${apiKey}`
     return (
       <div className="recipeSearcher">
         <h1>Find a Recipe!</h1>
-        <h1>Simply type a name of a dish you would like to create!</h1>
+        <h2>Simply type a name of a dish you would like to create!</h2>
         <form className="search-form" onSubmit={onSubmit}>
           <input
             type="text"
